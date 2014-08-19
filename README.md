@@ -37,9 +37,9 @@ Change the hadoop-metrics2.properties file and add the following in the sink
 
 *.period=10
 
-namenode.sink.tsdb.servers=<TSDB Server hostname >:4242
+namenode.sink.tsdb.servers="TSDB Server hostname":4242
 
-datanode.sink.tsdb.servers=<TSDB Server hostname >:4242
+datanode.sink.tsdb.servers="TSDB Server hostname":4242
 
 
 
