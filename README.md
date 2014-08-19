@@ -7,7 +7,7 @@ Every machine in hadoop cluster has a set of metrics associated with it which co
 We propose a solution to push these metrics from within the hadoop process itself providing more reliability inc ase the external agent stops working and 
 
 
-Comptaible Versions:-
+# Compatible Versions:-
 This system was tested with Hadoop versions :-
 1. Hadoop 1.2.1 
 2. Hadoop 2.4.1
@@ -17,7 +17,7 @@ and OpenTSDB 2.0
 The 2 files here are  TSDBSink-1.2.1.java and TSDBSink-2.4.1.java for Hadoop 1.2.1 and Hadoop 2.4.1 Version respectively 
 
 
-Instructions :-
+# Instructions :-
 
 To use this Sink you need to place the files in the following folder 
 
@@ -28,7 +28,7 @@ For Hadoop 2.4.1
 
 Change the hadoop-metrics2.properties file and add the following in the sink 
 
-# TSDB Sink
+
 *.sink.tsdb.class=org.apache.hadoop.metrics2.sink.TSDBSink
 *.period=10
 
@@ -36,12 +36,12 @@ namenode.sink.tsdb.servers=<TSDB Server hostname >:4242
 datanode.sink.tsdb.servers=<TSDB Server hostname >:4242
 
 
-Limitations:-
+# Limitations:-
 
 There are some limitations to this project. In case the TSDB server is restarted , the metrics are stopped . 
 
 
-Roadmap:-
+# Roadmap:-
 
 1. We are currently working on adding code to reset the connection in such a case upto a certain number of retires 
 
