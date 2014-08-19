@@ -21,19 +21,26 @@ The 2 files here are  TSDBSink-1.2.1.java and TSDBSink-2.4.1.java for Hadoop 1.2
 
 To use this Sink you need to place the files in the following folder 
 
-For Hadoop 1.2.1 
+For Hadoop 1.2.1
 <hadoop-1.2.1 source folder>/src/core/org/apache/hadoop/metrics2/sink/TSDBSink.java
+
 For Hadoop 2.4.1
 <hadoop-2.4.1 source folder >/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/metrics2/sink/TSDBSink.java
+
+and compile hadoop. 
+
 
 Change the hadoop-metrics2.properties file and add the following in the sink 
 
 
 *.sink.tsdb.class=org.apache.hadoop.metrics2.sink.TSDBSink
+
 *.period=10
 
 namenode.sink.tsdb.servers=<TSDB Server hostname >:4242
+
 datanode.sink.tsdb.servers=<TSDB Server hostname >:4242
+
 
 
 # Limitations:-
